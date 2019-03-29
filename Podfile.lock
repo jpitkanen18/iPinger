@@ -1,0 +1,16 @@
+PODS:
+  - PlainPing (0.5)
+
+DEPENDENCIES:
+  - PlainPing
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PlainPing
+
+SPEC CHECKSUMS:
+  PlainPing: 6b248b94d92be7ec0410952d1b09af43b9a39015
+
+PODFILE CHECKSUM: ed63fbf0f7634e413f4e06849030739148694b0e
+
+COCOAPODS: 1.5.2
