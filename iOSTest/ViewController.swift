@@ -99,7 +99,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
             
         } else {
           let ping = ipField.text
-            self.pickerData.
             PlainPing.ping(ping!, withTimeout: 1, completionBlock: {(timeElapsed:Double?, error:Error?) in
             if let latency = timeElapsed {
                 let latenssi = String(format: "%.2f", latency)
@@ -107,7 +106,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
                 self.unknownInd.isHidden = true
                 self.onlineInd.isHidden = false
                 self.offlineInd.isHidden = true
-                self.pickerData.append(self.ipField.text! + " - " + self.formatterDate.string(from: self.currentDateTime))
                 print(ping!)
             }
             if let error = error {
@@ -119,7 +117,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
                 self.unknownInd.isHidden = true
             }
         }
-        )}
+        )
+            self.pickerData.append(self.ipField.text! + " - " + self.formatterDate.string(from: self.currentDateTime))
+        }
     }
     
 }
