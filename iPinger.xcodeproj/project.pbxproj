@@ -45,7 +45,7 @@
 		B8D6F1D9F8EFE29F9C2B5F9B /* Pods_iOSTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD05A6DE4E9F9416E837F265 /* Pods-iOSTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTestTests/Pods-iOSTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		C1263E6AD48F3BB608E3D9E5 /* Pods-iOSTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTest/Pods-iOSTest.release.xcconfig"; sourceTree = "<group>"; };
-		E8E5BF42224B7DB000A8C24D /* iOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8E5BF42224B7DB000A8C24D /* iPinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E5BF45224B7DB000A8C24D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8E5BF47224B7DB000A8C24D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E8E5BF4A224B7DB000A8C24D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,10 +53,10 @@
 		E8E5BF4F224B7DB300A8C24D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8E5BF52224B7DB300A8C24D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8E5BF54224B7DB300A8C24D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8E5BF59224B7DB300A8C24D /* iOSTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8E5BF59224B7DB300A8C24D /* iPingerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPingerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E5BF5D224B7DB300A8C24D /* iOSTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTestTests.swift; sourceTree = "<group>"; };
 		E8E5BF5F224B7DB300A8C24D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8E5BF64224B7DB300A8C24D /* iOSTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8E5BF64224B7DB300A8C24D /* iPingerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPingerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E5BF68224B7DB300A8C24D /* iOSTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTestUITests.swift; sourceTree = "<group>"; };
 		E8E5BF6A224B7DB300A8C24D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE120DC79C449A6EBE9A795E /* Pods_iOSTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,9 +117,9 @@
 		E8E5BF39224B7DB000A8C24D = {
 			isa = PBXGroup;
 			children = (
-				E8E5BF44224B7DB000A8C24D /* iOSTest */,
-				E8E5BF5C224B7DB300A8C24D /* iOSTestTests */,
-				E8E5BF67224B7DB300A8C24D /* iOSTestUITests */,
+				E8E5BF44224B7DB000A8C24D /* iPingerTest */,
+				E8E5BF5C224B7DB300A8C24D /* iPingerTests */,
+				E8E5BF67224B7DB300A8C24D /* iPingerUITests */,
 				E8E5BF43224B7DB000A8C24D /* Products */,
 				CB114E0B0C4CCD278C075966 /* Pods */,
 				0BBF1B486C461D58942AD483 /* Frameworks */,
@@ -129,14 +129,14 @@
 		E8E5BF43224B7DB000A8C24D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E8E5BF42224B7DB000A8C24D /* iOSTest.app */,
-				E8E5BF59224B7DB300A8C24D /* iOSTestTests.xctest */,
-				E8E5BF64224B7DB300A8C24D /* iOSTestUITests.xctest */,
+				E8E5BF42224B7DB000A8C24D /* iPinger.app */,
+				E8E5BF59224B7DB300A8C24D /* iPingerTests.xctest */,
+				E8E5BF64224B7DB300A8C24D /* iPingerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E8E5BF44224B7DB000A8C24D /* iOSTest */ = {
+		E8E5BF44224B7DB000A8C24D /* iPingerTest */ = {
 			isa = PBXGroup;
 			children = (
 				E8E5BF45224B7DB000A8C24D /* AppDelegate.swift */,
@@ -147,33 +147,33 @@
 				E8E5BF54224B7DB300A8C24D /* Info.plist */,
 				E8E5BF4C224B7DB000A8C24D /* iOSTest.xcdatamodeld */,
 			);
-			path = iOSTest;
+			path = iPingerTest;
 			sourceTree = "<group>";
 		};
-		E8E5BF5C224B7DB300A8C24D /* iOSTestTests */ = {
+		E8E5BF5C224B7DB300A8C24D /* iPingerTests */ = {
 			isa = PBXGroup;
 			children = (
 				E8E5BF5D224B7DB300A8C24D /* iOSTestTests.swift */,
 				E8E5BF5F224B7DB300A8C24D /* Info.plist */,
 			);
-			path = iOSTestTests;
+			path = iPingerTests;
 			sourceTree = "<group>";
 		};
-		E8E5BF67224B7DB300A8C24D /* iOSTestUITests */ = {
+		E8E5BF67224B7DB300A8C24D /* iPingerUITests */ = {
 			isa = PBXGroup;
 			children = (
 				E8E5BF68224B7DB300A8C24D /* iOSTestUITests.swift */,
 				E8E5BF6A224B7DB300A8C24D /* Info.plist */,
 			);
-			path = iOSTestUITests;
+			path = iPingerUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E8E5BF41224B7DB000A8C24D /* iOSTest */ = {
+		E8E5BF41224B7DB000A8C24D /* iPinger */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E8E5BF6D224B7DB300A8C24D /* Build configuration list for PBXNativeTarget "iOSTest" */;
+			buildConfigurationList = E8E5BF6D224B7DB300A8C24D /* Build configuration list for PBXNativeTarget "iPinger" */;
 			buildPhases = (
 				991245E761808CB056F93BAF /* [CP] Check Pods Manifest.lock */,
 				E8E5BF3E224B7DB000A8C24D /* Sources */,
@@ -185,14 +185,14 @@
 			);
 			dependencies = (
 			);
-			name = iOSTest;
+			name = iPinger;
 			productName = iOSTest;
-			productReference = E8E5BF42224B7DB000A8C24D /* iOSTest.app */;
+			productReference = E8E5BF42224B7DB000A8C24D /* iPinger.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E8E5BF58224B7DB300A8C24D /* iOSTestTests */ = {
+		E8E5BF58224B7DB300A8C24D /* iPingerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E8E5BF70224B7DB300A8C24D /* Build configuration list for PBXNativeTarget "iOSTestTests" */;
+			buildConfigurationList = E8E5BF70224B7DB300A8C24D /* Build configuration list for PBXNativeTarget "iPingerTests" */;
 			buildPhases = (
 				26D9F0817BABFA4CE7B6DE70 /* [CP] Check Pods Manifest.lock */,
 				E8E5BF55224B7DB300A8C24D /* Sources */,
@@ -204,14 +204,14 @@
 			dependencies = (
 				E8E5BF5B224B7DB300A8C24D /* PBXTargetDependency */,
 			);
-			name = iOSTestTests;
+			name = iPingerTests;
 			productName = iOSTestTests;
-			productReference = E8E5BF59224B7DB300A8C24D /* iOSTestTests.xctest */;
+			productReference = E8E5BF59224B7DB300A8C24D /* iPingerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E8E5BF63224B7DB300A8C24D /* iOSTestUITests */ = {
+		E8E5BF63224B7DB300A8C24D /* iPingerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E8E5BF73224B7DB300A8C24D /* Build configuration list for PBXNativeTarget "iOSTestUITests" */;
+			buildConfigurationList = E8E5BF73224B7DB300A8C24D /* Build configuration list for PBXNativeTarget "iPingerUITests" */;
 			buildPhases = (
 				430FED8082D19B3353A92F70 /* [CP] Check Pods Manifest.lock */,
 				E8E5BF60224B7DB300A8C24D /* Sources */,
@@ -223,9 +223,9 @@
 			dependencies = (
 				E8E5BF66224B7DB300A8C24D /* PBXTargetDependency */,
 			);
-			name = iOSTestUITests;
+			name = iPingerUITests;
 			productName = iOSTestUITests;
-			productReference = E8E5BF64224B7DB300A8C24D /* iOSTestUITests.xctest */;
+			productReference = E8E5BF64224B7DB300A8C24D /* iPingerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -251,7 +251,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E8E5BF3D224B7DB000A8C24D /* Build configuration list for PBXProject "iOSTest" */;
+			buildConfigurationList = E8E5BF3D224B7DB000A8C24D /* Build configuration list for PBXProject "iPinger" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -264,9 +264,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E8E5BF41224B7DB000A8C24D /* iOSTest */,
-				E8E5BF58224B7DB300A8C24D /* iOSTestTests */,
-				E8E5BF63224B7DB300A8C24D /* iOSTestUITests */,
+				E8E5BF41224B7DB000A8C24D /* iPinger */,
+				E8E5BF58224B7DB300A8C24D /* iPingerTests */,
+				E8E5BF63224B7DB300A8C24D /* iPingerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -405,12 +405,12 @@
 /* Begin PBXTargetDependency section */
 		E8E5BF5B224B7DB300A8C24D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E8E5BF41224B7DB000A8C24D /* iOSTest */;
+			target = E8E5BF41224B7DB000A8C24D /* iPinger */;
 			targetProxy = E8E5BF5A224B7DB300A8C24D /* PBXContainerItemProxy */;
 		};
 		E8E5BF66224B7DB300A8C24D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E8E5BF41224B7DB000A8C24D /* iOSTest */;
+			target = E8E5BF41224B7DB000A8C24D /* iPinger */;
 			targetProxy = E8E5BF65224B7DB300A8C24D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -607,7 +607,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSTest.app/iOSTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iPinger.temp_caseinsensitive_rename.app/iPinger.temp_caseinsensitive_rename";
 			};
 			name = Debug;
 		};
@@ -629,7 +629,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSTest.app/iOSTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iPinger.temp_caseinsensitive_rename.app/iPinger.temp_caseinsensitive_rename";
 			};
 			name = Release;
 		};
@@ -678,7 +678,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E8E5BF3D224B7DB000A8C24D /* Build configuration list for PBXProject "iOSTest" */ = {
+		E8E5BF3D224B7DB000A8C24D /* Build configuration list for PBXProject "iPinger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E8E5BF6B224B7DB300A8C24D /* Debug */,
@@ -687,7 +687,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E8E5BF6D224B7DB300A8C24D /* Build configuration list for PBXNativeTarget "iOSTest" */ = {
+		E8E5BF6D224B7DB300A8C24D /* Build configuration list for PBXNativeTarget "iPinger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E8E5BF6E224B7DB300A8C24D /* Debug */,
@@ -696,7 +696,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E8E5BF70224B7DB300A8C24D /* Build configuration list for PBXNativeTarget "iOSTestTests" */ = {
+		E8E5BF70224B7DB300A8C24D /* Build configuration list for PBXNativeTarget "iPingerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E8E5BF71224B7DB300A8C24D /* Debug */,
@@ -705,7 +705,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E8E5BF73224B7DB300A8C24D /* Build configuration list for PBXNativeTarget "iOSTestUITests" */ = {
+		E8E5BF73224B7DB300A8C24D /* Build configuration list for PBXNativeTarget "iPingerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E8E5BF74224B7DB300A8C24D /* Debug */,
