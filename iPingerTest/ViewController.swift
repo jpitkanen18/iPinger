@@ -19,6 +19,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
         return pickerData.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if row > 0 {
+        let historyIP = pickerData[row].split(separator: " ")
+        ipField.text = String(historyIP[0]) as String
+        } else {
+        print("gah")
+        }
         return pickerData[row]
     }
     
@@ -40,6 +46,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
     let formatterDate = DateFormatter()
     var pickerData: [String] = [String]()
     var historyTicker = 0
+    var latencyArray: Array<Double> = []
     override func viewDidLoad() {
         super.viewDidLoad()
         offlineInd.isHidden = true
@@ -65,11 +72,37 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
         formatterDate.timeStyle = .short
         formatterDate.dateStyle = .short
         
+        var sysInfo = utsname()
+        uname(&sysInfo)
+        let machine = Mirror(reflecting: sysInfo.machine)
+        let identifier = machine.children.reduce("") { identifier, element in
+            guard let value = element.value as? Int8, value != 0 else { return identifier }
+            return identifier + String(UnicodeScalar(UInt8(value)))
+        }
+        
+        NSLog("Device Type ----> %@", info().platformType(platform: identifier as NSString));
+        
+        print(info().platformType(platform: identifier as String as NSString))
+        let devices = info().platformType(platform: identifier as NSString) as String
+        let device = devices.split(separator: "/")
+        deviceGlobal = String(device[0])
+        if device.count > 1 {
+        processor = String(device[1])
+        }
+        
+        
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         textField.resignFirstResponder()
         return true
+    }
+    func latencyAverage(latency: Double){
+        self.latencyArray.append(latency)
+        let sum = self.latencyArray.reduce(0, +)
+        let average = sum / Double(latencyArray.count)
+        let averageNorm = String(format: "%.2f", average)
+        averageLatency = averageNorm
     }
     @IBAction func historyClose(_ sender: Any) {
         pingHistory.isHidden = true
@@ -106,6 +139,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
                 self.unknownInd.isHidden = true
                 self.onlineInd.isHidden = false
                 self.offlineInd.isHidden = true
+                let latenssiSplit = latenssi.split(separator: " ")
+                self.latencyAverage(latency: Double(latenssiSplit[0])!)
                 print(ping!)
             }
             if let error = error {
@@ -121,5 +156,4 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
             self.pickerData.append(self.ipField.text! + " - " + self.formatterDate.string(from: self.currentDateTime))
         }
     }
-    
 }

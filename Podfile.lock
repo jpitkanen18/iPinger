@@ -1,16 +1,20 @@
 PODS:
   - PlainPing (0.5)
+  - ReachabilitySwift (4.3.0)
 
 DEPENDENCIES:
   - PlainPing
+  - ReachabilitySwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - PlainPing
+    - ReachabilitySwift
 
 SPEC CHECKSUMS:
   PlainPing: 6b248b94d92be7ec0410952d1b09af43b9a39015
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
 
-PODFILE CHECKSUM: ed63fbf0f7634e413f4e06849030739148694b0e
+PODFILE CHECKSUM: 23bd4afe6b4f0545a9dfd5082633f5f0a24246f8
 
 COCOAPODS: 1.5.2
