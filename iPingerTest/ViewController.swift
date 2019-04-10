@@ -153,7 +153,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
             }
         }
         )
+            if self.pickerData.contains(self.ipField.text!){
+                print("Blocced")
+            }
+            else {
             self.pickerData.append(self.ipField.text! + " - " + self.formatterDate.string(from: self.currentDateTime))
+            }
         }
     }
 }

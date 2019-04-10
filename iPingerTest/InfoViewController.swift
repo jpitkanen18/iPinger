@@ -26,7 +26,7 @@ class InfoViewController: UIViewController {
         let reachability = Reachability()
         connection = (reachability?.connection.description) ?? "No internet"
         if connection != "WiFi" {
-            infoField.text = "Info\n\n\nDevice: \(deviceGlobal)\nProcessor: \(processor)\nConnection: \(connection)\nLocal IP: Null\nRouter IP: Null\nRegion: \(region)\nAverage latency: \(averageLatency)"
+            infoField.text = "\n\n\nDevice: \(deviceGlobal)\nProcessor: \(processor)\nConnection: \(connection)\nLocal IP: Null\nRouter IP: Null\nRegion: \(region)\nAverage latency: \(averageLatency)"
         }
         else {
             let localIP = getIPAddress()
@@ -35,7 +35,7 @@ class InfoViewController: UIViewController {
             let routerIPTrue = (routerIP?.count)! - 1
             routerIP![routerIPTrue] = "1"
             routerAddress = (routerIP?.joined(separator: "."))!
-            infoField.text = "Info\n\n\nDevice: \(deviceGlobal)\nProcessor: \(processor)\nConnection: \(connection)\nLocal IP: \(localAddress)\nRouter IP: \(routerAddress)"
+            infoField.text = "\n\n\nDevice: \(deviceGlobal)\nProcessor: \(processor)\nConnection: \(connection)\nLocal IP: \(localAddress)\nRouter IP: \(routerAddress)\nRegion: \(region)\nAverage latency: \(averageLatency)"
         }
     }
     @IBAction func closeButton(_ sender: Any) {
